@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-tensorflow = "==2.15.0"
 jupyter = "==1.1.1"
 flask = "*"
 keras-image-helper = "*"
@@ -16,6 +15,7 @@ numpy = "*"
 pandas = "*"
 matplotlib = "*"
 scipy = "*"
+tensorflow = "==2.15.0"
 
 [dev-packages]
 
