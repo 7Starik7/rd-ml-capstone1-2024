@@ -104,9 +104,7 @@ def predict_endpoint():
 
 
 if __name__ == '__main__':
-    url = 'https://media.cnn.com/api/v1/images/stellar/prod/181121122852-germany-speed-limit-file-restricted.jpg?q=x_46,y_65,h_1652,w_2937,c_crop/h_653,w_1160/f_webp'
     # url = 'https://c7.alamy.com/comp/K0W4HC/a-traffic-sign-indicating-a-speed-limit-of-50-kmh-seen-near-tubingen-K0W4HC.jpg'
-    response = predict(url)
-    print(response)
-
-    # app.run(debug=True, host='0.0.0.0', port=9696)
+    # response = predict(url)
+    # print(response)
+    app.run(debug=True, host='0.0.0.0', port=9696)
