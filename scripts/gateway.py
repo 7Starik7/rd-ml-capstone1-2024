@@ -17,7 +17,7 @@ def np_to_protobuf(data):
     return tf.make_tensor_proto(data, shape=data.shape)
 
 
-host = os.getenv('TF_SERVING_HOST', 'localhost:8502')
+host = os.getenv('TF_SERVING_HOST', 'localhost:8500')
 
 channel = grpc.insecure_channel(host)
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
@@ -104,7 +104,7 @@ def predict_endpoint():
 
 
 if __name__ == '__main__':
-    # url = 'https://c7.alamy.com/comp/K0W4HC/a-traffic-sign-indicating-a-speed-limit-of-50-kmh-seen-near-tubingen-K0W4HC.jpg'
-    # response = predict(url)
-    # print(response)
-    app.run(debug=True, host='0.0.0.0', port=9696)
+    url = 'https://c7.alamy.com/comp/K0W4HC/a-traffic-sign-indicating-a-speed-limit-of-50-kmh-seen-near-tubingen-K0W4HC.jpg'
+    response = predict(url)
+    print(response)
+    # app.run(debug=True, host='0.0.0.0', port=9696)
